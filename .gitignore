@@ -1,0 +1,7 @@
+# .gitignore 파일 내용
+
+# 모든 .zip 파일 제외
+*.zip
+
+# doc 폴더 제외
+doc/
