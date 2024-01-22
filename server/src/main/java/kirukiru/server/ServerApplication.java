@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @EnableJpaAuditing //DB 생성수정자동추가
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@SpringBootApplication (exclude = SecurityAutoConfiguration.class)
 public class ServerApplication {
 
 	public static void main(String[] args) {

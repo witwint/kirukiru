@@ -25,20 +25,24 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        return httpSecurity
+        httpSecurity
                 .httpBasic(withDefaults())
-                .csrf((csrf) -> csrf.disable())
-                .cors((cors) -> cors.disable())
-                .sessionManagement((sessionManagement) ->
-                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
-                .authorizeRequests()
-                .antMatchers("/api/v1/users/sign-up", "/api/v1/users/login", "/api/v1/users/authority", "/api/v1/users/reissue", "/api/v1/users/logout").permitAll()
-                .requestMatchers(new AntPathRequestMatchers("/api/v1/users/sign-up")).permitAll()
-                .requestMatchers(new AntPathRequestMatchers("/api/v1/users/userTest")).hasAnyRole("USER")
-                .antMatchers("/api/v1/users/adminTest").hasAnyRole("ADMIN")
-                .anyRequest().permitAll()
-                .build();
+                .csrf((csrf) -> csrf.disable());
+//                .cors((cors) -> cors.disable());
+//                .sessionManagement((sessionManagement) ->
+//                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                );
+//                .authorizeRequests()
+//                .requestMatchers("/user/**").authenticated()
+//                .requestMatchers("/manager/**").hasAnyRole("MANAGER", "ADMIN")
+//                .requestMatchers("/admin/**").hasRole("ADMIN")
+//                .anyRequest().permitAll();
+//                .antMatchers("/api/v1/users/sign-up", "/api/v1/users/login", "/api/v1/users/authority", "/api/v1/users/reissue", "/api/v1/users/logout").permitAll()
+//                .requestMatchers(new AntPathRequestMatchers("/api/v1/users/sign-up")).permitAll()
+//                .requestMatchers(new AntPathRequestMatchers("/api/v1/users/userTest")).hasAnyRole("USER")
+//                .antMatchers("/api/v1/users/adminTest").hasAnyRole("ADMIN")
+//                .requestMatchers().permitAll()
+                return httpSecurity.build();
                 /*.and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider, redisTemplate), UsernamePasswordAuthenticationFilter.class);*/
         // JwtAuthenticationFilter를 UsernamePasswordAuthentictaionFilter 전에 적용시킨다.
