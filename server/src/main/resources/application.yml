@@ -2,7 +2,7 @@
 
 spring:
   profiles:
-    active: local
+    active: prod
 
 jwt:
   secret: ENC(xLAMr+oWpN0TZWmAfUnAShOkVmoVzUcbmX7nUq5LQVZxdK5B+H2kycXPPYg2EqR2pN0ojtiPFodbmoJ3cSlq6g==)

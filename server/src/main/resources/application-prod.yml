@@ -13,6 +13,6 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: ENC(FVYIODljCyBHVNloRL13Q+XBUHH7TPsY9TQhr/7WFKWrBGoWkfGc1skh/n+PvEzG5EuEyo1LbPn5oT9+VTxp5HZyyhk4kanN977UonVVlv/oIK5yDHoHeg==)
-    username: ENC(QNp8kdkg5gU8n5ARu63fKDU4s11Q6nMb)
-    password: ENC(jsVFQ3UoASBnylefNO2mUtVMVzYcEsI+)
+    url: ENC(5X5YCmAdK2dp46FL51OKR6mjrX4dSM1Kf39IURnNmCSKj6hImsT0P8O0xGbg4vxBKQmEGtJdt1hYMi57zJAJlxjCsEehyYypOVL6Lv8xd0rfyDhImXCmvLMqnjRvr/33)
+    username: ENC(FVL5dE5L0qcJDH0nuGO1h3KUe/u5r0ga)
+    password: ENC(Gg7F8JPQE7GDham3ex4TU8K5UVmoNxUd)
