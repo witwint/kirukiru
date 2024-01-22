@@ -1,0 +1,44 @@
+
+
+spring:
+  profiles:
+    active: local
+
+jwt:
+  secret: ENC(xLAMr+oWpN0TZWmAfUnAShOkVmoVzUcbmX7nUq5LQVZxdK5B+H2kycXPPYg2EqR2pN0ojtiPFodbmoJ3cSlq6g==)
+
+springdoc:
+  version: v1
+  packages-to-scan: spa.spaserver
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: swagger-ui.html            # Swagger UI ?? => localhost:8081/swagger-ui.html
+    tags-sorter: alpha            # alpha: ??? ? ?? ??, method: HTTP Method ? ??
+    operations-sorter: alpha      # alpha: ??? ? ?? ??, method: HTTP Method ? ??
+    doc-expansion: none
+  api-docs:
+    path: /api-docs/json
+    groups:
+      enabled: true
+  cache:
+    disabled: true
+---
+
+spring:
+  config:
+    name: local
+    activate:
+      on-profile: local
+  resources:
+    config-location: classpath:/application-local.yml
+
+---
+
+spring:
+  config:
+    name: prod
+    activate:
+      on-profile: prod
+  resources:
+    config-location: classpath:/application-prod.yml
